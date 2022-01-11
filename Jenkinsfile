@@ -2,11 +2,11 @@ pipeline {
 	//agent any
 	agent { docker {
 		alwaysPull true
-		image 'maven:3.8.4'}  } 
+		image 'maven:latest'}  } 
 	stages {
 		stage('Build') {
 			steps {
-				
+				sh 'mvn --version'
 				echo "Build"
 			}
 		}
